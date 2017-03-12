@@ -1,0 +1,47 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class DiagonalDifference {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int a[][] = new int[n][n];
+        for(int a_i=0; a_i < n; a_i++){
+            for(int a_j=0; a_j < n; a_j++){
+                a[a_i][a_j] = in.nextInt();
+            }
+        }
+        DiagonalDifference d = new DiagonalDifference();
+        int diff= d.diagDiff(a,n);
+        System.out.println(diff);
+    }
+    
+    /* function to calculate the diagonal difference*/
+    int diagDiff(int a[][], int n)
+        {
+        int diff=0, rightDiagSum=0, leftDiagSum=0,index=0;
+        for(int i=0; i < n; i++){
+            for(int j=0; j < n; j++){
+                 if(i==j)
+                    rightDiagSum+= a[i][j];
+                if( j== (n-1)-index)
+                    leftDiagSum+= a[i][j];
+            }
+            /* incrementing index to change the 2nd dimension for left Diagonal Sum*/
+            index++;
+        }
+        /* Calculating difference of the sums of right and left diagonals of an array*/
+        diff= rightDiagSum-leftDiagSum;
+        /* Return absolute difference*/
+        if(diff>=0)
+            return diff;
+        else
+            return -(diff);
+    }
+}
+
+
