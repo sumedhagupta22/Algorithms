@@ -1,2 +1,2 @@
 # Algorithms
-Solved HackerRank Problems
+Solved Problems from LeetCode and HackerRank
