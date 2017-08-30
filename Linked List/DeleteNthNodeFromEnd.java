@@ -6,7 +6,7 @@
       ListNode(int x, ListNode l) { val = x; next=l;}
   }
 
-   public class DeleteNodeFromList {
+   public class DeleteNthNodeFromEnd{
 	
 	 public void removeNthFromEnd(ListNode head, int n) {
 		 	ListNode start = new ListNode(0,null);
@@ -35,7 +35,7 @@
 		 ListNode l2= new ListNode(2,l3);
 		 ListNode l1= new ListNode(1,l2);
 		 ListNode head= new ListNode(l1.val,l1.next);
-		 DeleteNodeFromList d= new DeleteNodeFromList();
+		 DeleteNthNodeFromEnd d= new DeleteNthNodeFromEnd();
 		 d.removeNthFromEnd(head, 2);
 	 }
 }
