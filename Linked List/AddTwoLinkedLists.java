@@ -1,8 +1,14 @@
-package linkedList;
-
 /*
  * Created by Sumedha Gupta
  */
+
+//Definition for singly-linked list.
+class ListNode {
+     int val;
+     ListNode next;
+     ListNode(int x, ListNode l) { val = x; next=l;}
+ }
+
 
 public class AddTwoLinkedLists {
 	
