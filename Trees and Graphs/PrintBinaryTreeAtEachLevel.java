@@ -25,19 +25,16 @@ public class PrintBinaryTreeAtEachLevel {
 
 		if(root==null)
 			return;
-
+		
 		// queue(FIFO) to perform BFS 
 		Queue<TreeNode> q= new LinkedList<TreeNode>();
 		q.add(root);
 		while(true)	
 		{
-
 			int nodesInQueue= q.size();
-
 			if(nodesInQueue==0)
 				break;
 			while(nodesInQueue>0){
-
 				TreeNode temp= q.poll();
 				System.out.print(temp.val + " ");
 				if(temp.left!=null){
@@ -50,6 +47,5 @@ public class PrintBinaryTreeAtEachLevel {
 			}
 			System.out.println();
 		}
-
 	}
 }
