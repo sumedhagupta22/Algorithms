@@ -1,5 +1,3 @@
-package com.sgupta50.arrays;
-
 public class SwapNodesInPair
 {
 
@@ -14,8 +12,6 @@ public class SwapNodesInPair
         head.next = l2;
         l2.next = l3;
         l3.next = l4;
-
-        System.out.println("before swap");
 
         ListNode swapHead = swapPairs(head);
         while(swapHead != null)
